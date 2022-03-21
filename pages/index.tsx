@@ -1,86 +1,64 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import Todos from '../components/Todos'
+import UserDetails from '../components/UserDetails'
 
 const Home: NextPage = () => {
+
+  const router = useRouter()
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>React Coding Challenge</title>
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
+      <section className='max-w-5xl md:mx-auto text-3xl md:text-6xl font-extrabold'>
+        <h1>
+          Task Details
         </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      </section>
+      <main className='max-w-5xl md:mx-auto md:mt-10 md:border-2 flex md:justify-around md:gap-3 flex-col md:flex-row items-center p-3'>
+        <div className='md:border-2 rounded-lg p-1 md:w-[50%] w-full'>
+          <Todos />
+        </div>
+        <div className='md:border-2  rounded-lg p-1 w-full md:w-[50%]'>
+          <UserDetails />
         </div>
       </main>
+      <section className='max-w-5xl md:mx-auto text-3xl md:text-4xl font-bold my-10 p-1'>
+        <h1>
+          Check my other projects:
+        </h1>
+        <div className='grid grid-cols-1 md:grid-cols-3  transform transition-all duration-200 cursor-pointer  gap-3 font-medium text-3xl justify-around  p-3'>
+          <h1 className='projects' onClick={() => router.push('https://oas.vercel.app/')}>
+            Open Apple Store API:
+          </h1>
+          <h1 className='projects' onClick={() => router.push('https://twitter-m-2.vercel.app/')}>
+            Twiter Clone:
+          </h1>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+          <h1 className='projects' onClick={() => router.push('https://twitch-tv-clone.vercel.app/')}>
+            Twitch Clone:
+          </h1>
+          <h1 className='projects' onClick={() => router.push('https://oas.vercel.app/')}>
+            Weather Application:
+          </h1>
+          {/* add this https://wakanda-tan.vercel.app/ */}
+          <h1 className='projects' onClick={() => router.push('https://wakanda-tan.vercel.app/')}>
+            Wakanda:
+          </h1>
+          <h1 className="projects" onClick={() => router.push('https://github.com/theabhayprajapati/Open-Apple-Store://oas.vercel.app/')}>
+            Github
+          </h1>
+        </div>
+      </section>
     </div>
+
   )
 }
 
 export default Home
+
+

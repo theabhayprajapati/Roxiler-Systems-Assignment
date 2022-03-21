@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer components {
+    .projects {
+      @apply text-blue-300 hover:text-blue-700 transform transition-all duration-200 cursor-pointer  hover:scale-95;
+    }
+    
+    /* ... */
+  }
