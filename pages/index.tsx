@@ -31,27 +31,27 @@ const Home: NextPage = () => {
         <h1>
           Check my other projects:
         </h1>
-        <div className='grid grid-cols-1 md:grid-cols-3  transform transition-all duration-200 cursor-pointer  gap-3 font-medium text-3xl justify-around  p-3'>
-          <h1 className='projects' onClick={() => router.push('https://oas.vercel.app/')}>
+        <div className='grid grid-cols-2 md:grid-cols-4 transform transition-all duration-200 cursor-pointer  gap-3 font-medium text-xl justify-around p-3 noSelect'>
+          <button className='projects' onClick={() => router.push('https://oas.vercel.app/')}>
             Open Apple Store API:
-          </h1>
-          <h1 className='projects' onClick={() => router.push('https://twitter-m-2.vercel.app/')}>
+          </button>
+          <button className='projects' onClick={() => router.push('https://twitter-m-2.vercel.app/')}>
             Twiter Clone:
-          </h1>
+          </button>
 
-          <h1 className='projects' onClick={() => router.push('https://twitch-tv-clone.vercel.app/')}>
+          <button className='projects' onClick={() => router.push('https://twitch-tv-clone.vercel.app/')}>
             Twitch Clone:
-          </h1>
-          <h1 className='projects' onClick={() => router.push('https://oas.vercel.app/')}>
+          </button>
+          <button className='projects' onClick={() => router.push('https://weather-application-nextjs.vercel.app/')}>
             Weather Application:
-          </h1>
+          </button>
           {/* add this https://wakanda-tan.vercel.app/ */}
-          <h1 className='projects' onClick={() => router.push('https://wakanda-tan.vercel.app/')}>
+          <button className='projects' onClick={() => router.push('https://wakanda-tan.vercel.app/')}>
             Wakanda:
-          </h1>
-          <h1 className="projects" onClick={() => router.push('https://github.com/theabhayprajapati/Open-Apple-Store://oas.vercel.app/')}>
+          </button>
+          <button className="projects" onClick={() => router.push('https://github.com/theabhayprajapati/Open-Apple-Store')}>
             Github
-          </h1>
+          </button>
         </div>
       </section>
     </div>
